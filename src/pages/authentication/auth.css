@@ -1,0 +1,31 @@
+.auth-container{
+    height: 100vh;
+    text-align: center;
+    margin-top: 10%;
+}
+
+
+input[type=email], input[type=password]{
+    border: 1px solid #FFC24D;
+    padding: 20px 10px;
+    color: #858585;
+    margin-top: 20px;
+    width: 30%;
+    border-radius: 7px;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+.auth-btn{
+    background-color: #1D1F22;
+    padding: 15px 50px;
+    border-radius: 7px;
+    margin-top: 3%;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.arrow-btn{
+    margin-left: 10px;
+    color: #FFC24D;
+}
