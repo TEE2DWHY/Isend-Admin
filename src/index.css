@@ -18,3 +18,8 @@ body {
 .eye-visible{
   display: inline;
 }
+/* Spinner */
+.text-warning{
+  display: none;
+  padding: 10px 0;
+}

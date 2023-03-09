@@ -1,8 +1,31 @@
+import { useState } from "react";
+// styling
 import "./auth.css" 
 // icons
-import { HiddenPasswordIcon, ShowPasswordIcon } from "../../assets/icons/hide-password"
+import { HiddenPasswordIcon, ShowPasswordIcon } from "../../assets/icons/hide-password";
+import { RightArrow } from "../../assets/icons/arrows";
+import Spinner from "../../assets/icons/spinner";
+
 
 const Auth = () => {
+    const [formData, setFormData] = useState({
+        email:"", password : ""
+    })
+
+    const handleChange = (e)=>{
+        setFormData((prevFormData)=>{
+            return{
+                ...prevFormData,
+                [e.target.name] : e.target.value
+            }  
+        })
+    }
+
+       const handleSubmit = (e) =>{
+        e.preventDefault();
+        window.location = "/authenticate"
+       }
+
     const passwordVisibility =() =>{
         var showPassword = document.getElementById("password");
         if (showPassword.type === "text") {
@@ -20,18 +43,22 @@ const Auth = () => {
     <>
         <div className='auth-container'>
             <h1>Welcome Back!!</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
             <div>
                 <input
                     type="email"
                     placeholder="Email"
+                    name="email"
+                    onChange={handleChange}
                 />
             </div>
         <div>
             <input
                 type="password"
                 placeholder="Password"
+                name="password"
                 id="password"
+                onChange={handleChange}
                 />
                 <span
                 className="hide-password"
@@ -45,8 +72,9 @@ const Auth = () => {
                 <ShowPasswordIcon/>
                 </span>
         </div>
+                <Spinner/>
             <button className="auth-btn">
-                Authentication <i className="fa-solid fa-arrow-right arrow-btn"></i>
+                Authentication <RightArrow/>
             </button>
             </form>
         </div>

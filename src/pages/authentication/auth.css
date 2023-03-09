@@ -1,7 +1,10 @@
+/* Auth Page */
 .auth-container{
     height: 100vh;
     text-align: center;
     margin-top: 10%;
+    animation: fadeIn;
+    animation-duration: 3s;
 }
 
 
@@ -23,8 +26,33 @@ input[type=email], input[type=password], input[type=text]{
     color: #fff;
     cursor: pointer;
     text-transform: uppercase;
+    border: none;
+}
+.auth-btn:hover{
+    animation: pulse;
+    animation-duration: 3s;
 }
 .arrow-btn{
     margin-left: 10px;
     color: #FFC24D;
 }
+
+/* Authenticator Page*/
+.Authenticator{
+    text-align: center;
+    margin-top: 15%;
+}
+
+/* Mobile */
+@media(max-width:1200px){
+    .auth-container{
+        margin-top: 45%;
+    }
+    .Authenticator{
+        margin-top: 40%;
+    }
+    input[type=email], input[type=password], input[type=text]{
+        width: 80%;
+    }
+}
+
