@@ -2,4 +2,19 @@ body {
   margin: 0;
   font-family: 'Plus Jakarta Sans', sans-serif;  
 }
-
+/* hide-password */
+.password-icon{
+  position: absolute;
+  margin-left: -50px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.show-password{
+  display: none;
+}
+.eye-hidden{
+  display: none;
+}
+.eye-visible{
+  display: inline;
+}

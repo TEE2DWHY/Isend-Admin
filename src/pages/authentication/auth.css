@@ -5,14 +5,13 @@
 }
 
 
-input[type=email], input[type=password]{
+input[type=email], input[type=password], input[type=text]{
     border: 1px solid #FFC24D;
     padding: 20px 10px;
     color: #858585;
     margin-top: 20px;
     width: 30%;
     border-radius: 7px;
-    transition: 0.5s;
     box-sizing: border-box;
 }
 
